@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main-container {
+    @apply w-11/12 max-w-screen-2xl mx-auto
+}
