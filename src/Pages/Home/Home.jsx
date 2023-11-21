@@ -28,6 +28,11 @@ import herbsOutline from "../../assets/herbs-outline.svg";
 import specialtyOutline from "../../assets/specialty-outline.svg";
 
 const Home = () => {
+
+    useEffect(() => {
+        document.title = "v.Blend Frontend Design"
+    }, [])
+
     return (
         <div className='main-container mt-20 font-montserrat'>
 
@@ -35,8 +40,8 @@ const Home = () => {
 
             <div className="home-top flex justify-between">
 
-                <div className="home-top-left flex flex-col gap-6">
-                    <h1 className='text-7xl leading-tight w-3/4'>Simplify your health <img src={bluePill} alt="" className='w-12 inline-block' /> and <img src={yellowMineral} alt="" className='w-12 inline-block' /> wellbeing</h1>
+                <div className="home-top-left flex flex-col gap-6 w-3/5">
+                    <h1 className='text-7xl leading-tight'>Simplify your health <img src={bluePill} alt="" className='w-12 inline-block' /> and <img src={yellowMineral} alt="" className='w-12 inline-block' /> wellbeing</h1>
 
 
                     <div className="unlock-plan-btn flex gap-4 items-center">
