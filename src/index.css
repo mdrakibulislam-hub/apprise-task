@@ -7,5 +7,5 @@
 }
 
 .main-container {
-    @apply w-11/12 max-w-screen-2xl mx-auto
+    @apply w-10/12 max-w-screen-2xl mx-auto
 }

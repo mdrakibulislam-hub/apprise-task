@@ -7,6 +7,7 @@ import { SiThreads } from "react-icons/si";
 import { FaFacebookF } from "react-icons/fa";
 import { PiLinkFill } from "react-icons/pi";
 import { FaPlus } from "react-icons/fa";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 
 
@@ -16,10 +17,13 @@ const Navbar = () => {
             <div className="nav-container main-container font-montserrat font-semibold py-6 flex justify-between">
 
 
-                <div className="navbar-starting flex items-center gap-8">
-                    <img src={logo} alt="" className='w-40' />
-                    <Link className='bg-white py-3 px-4 rounded-full'>About</Link>
-                    <Link className='bg-white py-3 px-4 rounded-full'>Send e-gitt</Link>
+                <div className='flex items-center gap-4'>
+                    <button className='bg-white text-black p-3 text-xl rounded-full md:hidden'><GiHamburgerMenu /></button>
+                    <div className="navbar-starting md:flex items-center gap-8 hidden">
+                        <img src={logo} alt="" className='w-40' />
+                        <Link className='bg-white py-3 px-4 rounded-full'>About</Link>
+                        <Link className='bg-white py-3 px-4 rounded-full'>Send e-gitt</Link>
+                    </div>
                 </div>
 
 
@@ -27,9 +31,9 @@ const Navbar = () => {
 
                 <div className="navbar-ending flex items-center gap-3">
 
-                    <Link className="share-button bg-white p-4 rounded-full"><IoMdShare /></Link>
+                    <Link className="share-button bg-white p-4 rounded-full hidden md:visible"><IoMdShare /></Link>
 
-                    <div className="social-icons-button flex gap-2 bg-white py-2 px-4 rounded-full">
+                    <div className="social-icons-button md:flex gap-2 bg-white py-2 px-4 rounded-full hidden">
                         <Link className='text-white bg-black p-2 rounded-full'><RiInstagramFill /></Link>
                         <Link className='text-white bg-black p-2 rounded-full'><SiThreads /></Link>
                         <Link className='text-white bg-black p-2 rounded-full'><FaFacebookF /></Link>
