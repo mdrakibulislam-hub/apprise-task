@@ -18,7 +18,7 @@ const Navbar = () => {
 
     return (
         <>
-            <div className="nav-container main-container font-montserrat font-semibold py-6 flex justify-between">
+            <div className="nav-container main-container font-montserrat font-semibold py-4 flex justify-between bg-[#F7F7F7] sticky top-0 z-10">
 
 
                 <div className='flex items-center gap-4'>
