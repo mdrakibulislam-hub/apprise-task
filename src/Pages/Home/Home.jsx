@@ -20,12 +20,16 @@ import pills from "../../assets/capsules.png";
 import tablet from "../../assets/tablet.jpg";
 import bluePill from "../../assets/blue-pill.svg";
 import yellowMineral from "../../assets/yellow-mineral.svg";
-
 import minralsOutline from "../../assets/mineral-outline.svg";
 import vitaminsOutline from "../../assets/vitamin-outline.svg";
 import probioticsOutline from "../../assets/probiotics-outline.svg";
 import herbsOutline from "../../assets/herbs-outline.svg";
 import specialtyOutline from "../../assets/specialty-outline.svg";
+import blackMineral from "../../assets/minerals-black.svg";
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 const Home = () => {
 
@@ -36,11 +40,13 @@ const Home = () => {
     return (
         <div className='main-container mt-20 font-montserrat'>
 
+
+
             {/* ::::::::: HOME TOP SECTION ::::::::: */}
 
             <div className="home-top lg:flex justify-between">
 
-                <div className="home-top-left flex flex-col gap-6 w-3/5">
+                <div className="home-top-left flex flex-col gap-6 w-3/5" data-aos="fade-up">
                     <h1 className='text-5xl lg:text-7xl leading-tight'>Simplify your health <img src={bluePill} alt="" className='w-12 inline-block' /> and <img src={yellowMineral} alt="" className='w-12 inline-block' /> wellbeing</h1>
 
 
@@ -50,21 +56,22 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="home-top-right mt-6 flex gap-2 items-center">
+                <div className="home-top-right mt-6 flex gap-2 items-center" data-aos="fade-up">
                     <Link className='text-2xl font-medium underline'>Browse Library</Link>
                     <BsArrowDownCircle className='text-3xl' />
                 </div>
 
             </div>
 
+
             {/* ::::::::: HOME MIDDLE SECTION ::::::::: */}
             <div className="home-middle-section grid lg:grid-cols-4 gap-8 my-12 items-end">
 
 
-                <div className='quiz-div lg:col-span-1 flex flex-col gap-4'>
+                <div className='quiz-div lg:col-span-1 flex flex-col gap-4' data-aos="fade-up">
                     <Link className=' flex gap-2 items-center text-2xl lg:text-3xl bg-white rounded-full py-5 px-7 w-fit'><BsArrowRight /> <span className='font-medium'>Start The Quiz!</span></Link>
                     <div className='bg-[#FFF089] p-5 rounded-3xl'>
-                        <div className='flex gap-2 items-center'>
+                        <div className='flex gap-2 items-center flex-wrap md:flex-nowrap'>
                             <span className='text-7xl font-normal'>1151</span>
                             <span className='text-lg'>People completed <span className='font-semibold'>the quiz</span> today</span>
                         </div>
@@ -79,7 +86,7 @@ const Home = () => {
 
 
 
-                <div className='middle-div lg:col-span-2 bg-white rounded-3xl'>
+                <div className='middle-div lg:col-span-2 bg-white rounded-3xl' data-aos="fade-up">
                     <div className='p-5 flex flex-col gap-8'>
                         <div className='flex justify-between'>
                             <div className='flex items-center gap-3'>
@@ -104,7 +111,7 @@ const Home = () => {
                 </div>
 
 
-                <div className='pills-div p-8 rounded-3xl bg-[#D9EAFD] lg:col-span-1 h-fit'>
+                <div className='pills-div p-8 rounded-3xl bg-[#D9EAFD] lg:col-span-1 h-fit' data-aos="fade-up">
                     <div className='flex justify-between'>
                         <h3 className='px-5 py-2 text-black bg-white rounded-full font-medium text-xl'>Library <sup>02</sup></h3>
                         <button><FaCirclePlus className='text-white text-4xl' /></button>
@@ -115,9 +122,10 @@ const Home = () => {
 
             </div>
 
+
             {/* ::::::::: HOME BOTTOM SECTION ::::::::: */}
             <div className='home-bottom-section grid lg:grid-cols-2 gap-8 my-8'>
-                <div className='boottom-left-section bg-white p-8 rounded-3xl'>
+                <div className='boottom-left-section bg-white p-8 rounded-3xl' data-aos="fade-up">
                     <div className='top-section lg:flex gap-6 justify-between items-end'>
                         <p className='text-4xl flex items-end'>Product <br /> Library <BsArrowRightCircleFill /></p>
                         <p className='mt-4 lg:mt-0'>Build your own <br /><span className='font-bold'>personalized monthly pack!</span></p>
@@ -129,7 +137,7 @@ const Home = () => {
                         {/* ACCORIDIAN STARTS HERE */}
 
                         <div className="join join-vertical w-full rounded-none">
-                            <div className="collapse collapse-arrow join-item border-b border-base-300">
+                            <div className="collapse collapse-arrow join-item border-b border-base-300" data-aos="fade-up">
                                 <input type="radio" name="my-accordion" checked="checked" />
                                 <div className="collapse-title text-3xl font-medium">
                                     Minerals <img src={minralsOutline} className='w-6 inline-block' alt="" />
@@ -139,7 +147,7 @@ const Home = () => {
                                     <Link className='px-5 py-2 w-fit text-black border-black border-2 rounded-full text-lg font-medium flex items-center gap-2'><BsArrowRight />Explore</Link>
                                 </div>
                             </div>
-                            <div className="collapse collapse-arrow join-item border-b border-base-300">
+                            <div className="collapse collapse-arrow join-item border-b border-base-300" data-aos="fade-up">
                                 <input type="radio" name="my-accordion" />
                                 <div className="collapse-title text-3xl font-medium">
                                     Vitamins <img src={vitaminsOutline} className='w-6 inline-block' alt="" />
@@ -149,7 +157,7 @@ const Home = () => {
                                     <Link className='px-5 py-2 w-fit text-black border-black border-2 rounded-full text-lg font-medium flex items-center gap-2'><BsArrowRight />Explore</Link>
                                 </div>
                             </div>
-                            <div className="collapse collapse-arrow join-item border-b border-base-300">
+                            <div className="collapse collapse-arrow join-item border-b border-base-300" data-aos="fade-up">
                                 <input type="radio" name="my-accordion" />
                                 <div className="collapse-title text-3xl font-medium">
                                     Probiotics <img src={probioticsOutline} className='w-6 inline-block' alt="" />
@@ -159,7 +167,7 @@ const Home = () => {
                                     <Link className='px-5 py-2 w-fit text-black border-black border-2 rounded-full text-lg font-medium flex items-center gap-2'><BsArrowRight />Explore</Link>
                                 </div>
                             </div>
-                            <div className="collapse collapse-arrow join-item border-b border-base-300">
+                            <div className="collapse collapse-arrow join-item border-b border-base-300" data-aos="fade-up">
                                 <input type="radio" name="my-accordion" />
                                 <div className="collapse-title text-3xl font-medium">
                                     Herbs <img src={herbsOutline} className='w-6 inline-block' alt="" />
@@ -169,7 +177,7 @@ const Home = () => {
                                     <Link className='px-5 py-2 w-fit text-black border-black border-2 rounded-full text-lg font-medium flex items-center gap-2'><BsArrowRight />Explore</Link>
                                 </div>
                             </div>
-                            <div className="collapse collapse-arrow join-item border-b border-base-300">
+                            <div className="collapse collapse-arrow join-item border-b border-base-300" data-aos="fade-up">
                                 <input type="radio" name="my-accordion" />
                                 <div className="collapse-title text-3xl font-medium">
                                     Speciality <img src={specialtyOutline} className='w-6 inline-block' alt="" />
@@ -181,23 +189,23 @@ const Home = () => {
                             </div>
                         </div>
 
-
+                        {/* ACCORDIAN ENDS HERE */}
 
 
                     </div>
                 </div>
 
 
-                <div className='boottom-right-section bg-[#FFF089] p-8 rounded-3xl'>
+                <div className='boottom-right-section bg-[#FFF089] p-8 rounded-3xl' data-aos="fade-up">
 
                     <div className='bottom-right-top lg:flex justify-between items-center'>
-                        <h3 className='text-4xl font-medium'>Minerals</h3>
+                        <h3 className='text-4xl font-medium'>Minerals <img src={blackMineral} alt="" className='w-7 inline-block' /></h3>
                         <Link className=' flex gap-2 items-center text-xl bg-white rounded-full py-3 px-5 w-fit mt-4 lg:mt-4'><BsArrowRight /> <span className='font-medium'>Explore Library</span></Link>
                     </div>
 
 
 
-                    <div className='middle-div bg-white rounded-3xl lg:w-3/5 m-auto my-8 lg:my-16'>
+                    <div className='middle-div bg-white rounded-3xl lg:w-3/5 m-auto my-8 lg:my-16' data-aos="fade-up">
                         <div className='p-5 flex flex-col gap-8'>
                             <div className='flex justify-between'>
                                 <div className='flex items-center gap-3'>
@@ -235,8 +243,6 @@ const Home = () => {
 
 
             </div>
-
-
 
 
         </div >

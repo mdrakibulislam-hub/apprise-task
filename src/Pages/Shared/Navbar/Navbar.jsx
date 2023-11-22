@@ -14,7 +14,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 const Navbar = () => {
 
     const [hamClick, setHamClick] = useState(false);
-    console.log(hamClick);
+    // console.log(hamClick);
 
     return (
         <>
